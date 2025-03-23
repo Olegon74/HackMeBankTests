@@ -1,0 +1,11 @@
+api\ForFillingOutTheApiFormTests.class
+ui\ForFillingOutTheUiFormTests.class
+ui\HomePage.class
+data\TestData.class
+ui\PageObjectUiTests.class
+models\UserRequest$UserRequestBuilder.class
+api\Specification.class
+data\DataGenerator.class
+models\UserRequest.class
+api\UserFactory.class
+ui\BaseConfiguration.class

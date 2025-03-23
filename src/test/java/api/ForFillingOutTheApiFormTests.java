@@ -3,21 +3,21 @@ package api;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
+import io.qameta.allure.testng.Tag;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import models.UserRequest;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import static api.Specification.*;
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 @Tag("API")
 public class ForFillingOutTheApiFormTests {
 
-    @BeforeAll
+    @BeforeClass
     public static void setup() {
         Specification.setup();
     }
@@ -26,7 +26,7 @@ public class ForFillingOutTheApiFormTests {
     @AllureId("3")
     @Owner("Олег О.")
     @Description("отправка Post запроса на url https://tl.af-ctf.ru/calluserforsignup, с валидными данными")
-    public void fillingOutTheFormWithValidDataTestApi() {
+    public void fillingOutTheFormWithValidDataApiTest() {
         UserRequest user = UserFactory.fillingOutTheFormWithValidData();
         Response response = given()
                 .spec(requestSpec)
@@ -47,7 +47,7 @@ public class ForFillingOutTheApiFormTests {
     @AllureId("4")
     @Owner("Олег О.")
     @Description("Отправка Post запроса на url https://tl.af-ctf.ru/calluserforsignup, с не валидным email")
-    public void fillingOutTheFormWithAnInvalidEmailTestApi() {
+    public void fillingOutTheFormWithAnInvalidEmailApiTest() {
 
         UserRequest user = UserFactory.fillingOutTheFormWithInvalidEmail();
         Response response = given()

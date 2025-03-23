@@ -3,13 +3,13 @@ package ui;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public class PageObjectUiTests extends BaseConfiguration {
 
     HomePage homePage = new HomePage();
 
-    @Test
+   @Test
     @AllureId("5")
     @Owner("Олег О.")
     @Description("Проверка что при валидном заполнении формы и клике по кнопке Получить, появляется попап с текстом, Код проверки")

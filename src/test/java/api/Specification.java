@@ -5,7 +5,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.junit.jupiter.api.BeforeAll;
+import org.testng.annotations.BeforeClass;
 
 import static io.restassured.RestAssured.with;
 
@@ -14,7 +14,7 @@ public class Specification {
     public static RequestSpecification requestSpec;
     public static ResponseSpecification responseSpec;
 
-    @BeforeAll
+    @BeforeClass
     public static void setup() {
         RestAssured.baseURI = "https://tl.af-ctf.ru";
 

@@ -3,8 +3,8 @@ package ui;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import io.qameta.allure.testng.Tag;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
@@ -21,7 +21,7 @@ public class ForFillingOutTheUiFormTests extends BaseConfiguration {
     @AllureId("1")
     @Owner("Олег О.")
     @Description("Проверка что при валидном заполнении формы и клике по кнопке Получить, появляется попап с текстом, Код проверки")
-    public void fillingOutTheFormWithValidDataTestUi() {
+    public void fillingOutTheFormWithValidDataUiTest() {
         step("Ввод данных в поле ФИО", () -> {
             inputInitials.shouldBe(visible).setValue(INITIALS);
         });
@@ -60,7 +60,7 @@ public class ForFillingOutTheUiFormTests extends BaseConfiguration {
     @AllureId("2")
     @Owner("Олег О.")
     @Description("Проверка, что при не валидном заполнении поля email, появляется сообщение об ошибке")
-    public void fillingOutTheFormWithAnInvalidEmailTestUi() {
+    public void fillingOutTheFormWithAnInvalidEmailUiTest() {
         step("Ввод данных в поле ФИО", () -> {
             inputInitials.shouldBe(visible).setValue(INITIALS);
         });

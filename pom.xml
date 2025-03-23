@@ -22,7 +22,7 @@
         <jackson-databind.version>2.15.3</jackson-databind.version>
         <selenide.version>7.2.1</selenide.version>
         <webdrivermanager.version>5.8.0</webdrivermanager.version>
-        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <testng.version>7.9.0</testng.version>
     </properties>
 
     <dependencyManagement>
@@ -80,15 +80,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>${junit.jupiter.version}</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit5</artifactId>
+            <artifactId>allure-testng</artifactId>
             <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
@@ -145,6 +145,9 @@
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
 

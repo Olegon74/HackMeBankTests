@@ -6,9 +6,9 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.Map;
 
@@ -31,7 +31,7 @@ public class BaseConfiguration extends TestData {
     SelenideElement emailError = $(byXpath("//input[@id='email']/following::div[text()='Текст ошибки'][1]"));
 
 
-    @BeforeEach
+    @BeforeMethod
     void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.baseUrl = "https://tl.af-ctf.ru/#inputForAuth";
@@ -48,7 +48,7 @@ public class BaseConfiguration extends TestData {
         open(baseUrl);
 
     }
-    @AfterEach
+    @AfterMethod
     void tearDown() {
         closeWebDriver();
     }
