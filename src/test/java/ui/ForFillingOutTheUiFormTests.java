@@ -86,7 +86,6 @@ public class ForFillingOutTheUiFormTests extends BaseConfiguration {
             submitLoginButton.shouldBe(visible).click();
         });
         step("Проверка что после клика, появился текст ошибки", () -> {
-
             emailError.shouldHave(cssValue("display", "none"));
         });
 

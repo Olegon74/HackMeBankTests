@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: api.ForFillingOutTheApiFormTests
+Test set: ui.PageObjectUiTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.964 s -- in api.ForFillingOutTheApiFormTests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.79 s -- in ui.PageObjectUiTests
