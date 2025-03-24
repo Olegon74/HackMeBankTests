@@ -5,8 +5,8 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import io.qameta.allure.testng.Tag;
 import org.testng.annotations.Test;
-@Tag("UI")
 
+@Tag("UI")
 public class PageObjectUiTests extends BaseConfiguration {
 
     HomePage homePage = new HomePage();
