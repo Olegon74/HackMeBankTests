@@ -18,7 +18,7 @@ public class Specification {
     public static void setup() {
         RestAssured.baseURI = "https://tl.af-ctf.ru";
 
-        requestSpec = with()
+        requestSpec = RestAssured.with()
                 .baseUri(RestAssured.baseURI)
                 .log().all()
                 .contentType(ContentType.JSON);

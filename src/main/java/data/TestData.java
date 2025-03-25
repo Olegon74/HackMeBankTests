@@ -5,6 +5,7 @@ public class TestData {
     DataGenerator dataGenerator = new DataGenerator();
 
     public String INITIALS = dataGenerator.generateNameWithMiddle();
+    public static final String INITIALS1 = "Тестов Тест Тестович";
     public String EMAIL = dataGenerator.generateEmail();
     public static final String EMAIL1 = "test@mail.ru";
     public static final String INVALID_EMAIL = "@gmail.com";

@@ -17,6 +17,7 @@ import static io.qameta.allure.Allure.step;
 @Tag("UI")
 public class ForFillingOutTheUiFormTests extends BaseConfiguration {
 
+
     @Test
     @AllureId("1")
     @Owner("Олег О.")
@@ -92,3 +93,5 @@ public class ForFillingOutTheUiFormTests extends BaseConfiguration {
     }
 
 }
+
+
