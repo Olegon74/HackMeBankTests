@@ -8,16 +8,18 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import ui.page.HomePage;
 
 import java.util.Map;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 
-public class BaseConfiguration extends BasePageElement {
-
+public class BaseConfiguration extends HomePage {
 
     @BeforeMethod
     void setUp() {
+
+
         WebDriverManager.chromedriver().setup();
         Configuration.baseUrl = "https://tl.af-ctf.ru/#inputForAuth";
         Configuration.browser = "chrome";
@@ -33,6 +35,7 @@ public class BaseConfiguration extends BasePageElement {
         Selenide.open(baseUrl);
 
     }
+
     @AfterMethod
     void tearDown() {
         Selenide.closeWebDriver();

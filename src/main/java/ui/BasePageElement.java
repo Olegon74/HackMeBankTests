@@ -6,6 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import data.TestData;
 
 public class BasePageElement extends TestData {
+
     public SelenideElement inputInitials = Selenide.$(Selectors.byId("userName"));
     public SelenideElement inputEmail = Selenide.$(Selectors.byId("email"));
     public SelenideElement inputPhoneNumber = Selenide.$(Selectors.byId("phoneNumber"));
